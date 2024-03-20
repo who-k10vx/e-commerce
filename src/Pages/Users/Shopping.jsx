@@ -8,6 +8,7 @@ function Shopping() {
     const [record, setRecord] = useState([]);
     const [cate, setCate] = useState([]);
     const [viewcartDetails, setViewcartDetails] = useState([])
+    const [singlerecord,setSingleRecord] = useState({});
     console.log(viewcartDetails);
 
     const view = async () => {
@@ -34,7 +35,7 @@ function Shopping() {
     const viewDetails = async (id) => {
         try {
             let { data } = await axios.get(`http://localhost:8000/products/${id}`)
-            console.log(data);
+           setSingleRecord(data)
             //    setViewcartDetails(data)
         } catch (error) {
             console.log(error);
@@ -96,9 +97,9 @@ function Shopping() {
 
             {/* Ouick Add  */}
             <div className="ind offcanvas offcanvas-end m-4 p-3 bottom-0  rounded-3 h-75  mt-auto overwidth" tabIndex={-1} id="quickadd" aria-labelledby="offcanvasRightLabel" style={{ height: 'fit-content!important' }}>
-                {
-                    [].map((val) => {
-                        return (
+                
+                   
+                       
                             <>
                                 <div>
                                     <div className="col-12 d-flex justify-content-end">
@@ -108,7 +109,7 @@ function Shopping() {
                                         <div className="col-12 d-flex align-items-center justify-content-center border-bottom pb-4">
                                             <div className="col-2">
                                                 <div className="imge">
-                                                    <img src={val.imageurl} alt="product" className="img-fluid rounded-3" />
+                                                    <img src={singlerecord.imageurl} alt="product" className="img-fluid rounded-3" />
                                                 </div>
                                             </div>
                                             <div className="col-10 d-flex flex-column ms-3">
@@ -191,9 +192,9 @@ function Shopping() {
                                     </div>
                                 </div>
                             </>
-                        )
-                    })
-                }
+                        
+                    
+                
 
 
 
@@ -476,11 +477,17 @@ function Shopping() {
                                                 {
                                     cate.map((val, i) => {
                                         i += 1
-                                        if (i > 7) {
+                                        if (i > 10) {
 
                                             return (
 
-                                                <div onClick={() => category(val.category)} className="py-1"><input class="rd-on" type="radio" id="age1" name="age" value="30"/><label className="ps-2 fw-medium text-secondary">{val.category}({i})</label></div>
+                                                <div onClick={() => category(val.category)} className="py-1 "><label className=" fw-medium text-secondary"><input class="rd-on d-inline-block m-2   " type="radio" id="age1" name="age" value="30"/>{val.category}({i})</label></div>
+
+
+                                                
+
+
+  
 
 
                                             )

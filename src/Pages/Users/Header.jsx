@@ -9,6 +9,8 @@ function Header() {
     const [Pass, setPass] = useState('')
     const [cart, setCart] = useState([])
     const [record, setRecord] = useState([])
+    const [search,setSearch] = useState("");
+    
 
 
     const view = async () => {
@@ -51,6 +53,23 @@ function Header() {
             return false;
         }
     }
+
+    const fetchData = async () => {
+        try {
+          const response = await axios.get('http://localhost:8000/products');
+          const data = response.data;
+          const results = data.filter((item)=>{
+                return item.tittle.toLowerCase().includes(search.toLowerCase());
+          })
+        //   setRecord(results);
+         setRecord(results);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          
+        }
+      };
+  
+      fetchData();
 
 
 
@@ -564,11 +583,11 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                {/* search popup  */}
+                {/* search1 popup  */}
                 <div className="offcanvas offcanvas-end rounded-3  m-3 pt-3 px-2 overwidth" tabIndex={-1} id="searchcanva" aria-labelledby="offcanvasRightLabel ">
                     <div className="offcanvas-header col-11">
                         <h5 className="offcanvas-title col-12" id="offcanvasRightLabel">
-                            <input type="text" className="form-control search border-0 col-12 fw-semibold border-1 text-secondary border-bottom border-black rounded-0 fs-5 ps-0 pb-2" id="validationCustom03" placeholder="Search..." required />
+                            <input type="text" onChange={ (e) => setSearch(e.target.value) } value={search} className="form-control search border-0 col-12 fw-semibold border-1 text-secondary border-bottom border-black rounded-0 fs-5 ps-0 pb-2" id="validationCustom03" placeholder="Search..." required />
                             <div className="invalid-feedback">
                             </div></h5>
                         <button type="button" className="btn-close col-1" data-bs-dismiss="offcanvas" aria-label="Close" />
@@ -579,194 +598,36 @@ function Header() {
                                 <li className="nav-item px-1  " role="presentation">
                                     <button className="bg-white fs-5 border-0 fw-semibold fst-italic active" id="pills-home-tab1" data-bs-toggle="pill" style={{ fontWeight: '900!important', letterSpacing: '-0.02rem' }} data-bs-target="#pills-home1" role="tab" aria-controls="pills-home1" aria-selected="true">PRODUCTS</button>
                                 </li>
-                                <li className="nav-item px-1  " role="presentation">
-                                    <button className="bg-white fs-5 border-0 fw-semibold text-secondary opacity-50 fst-italic" id="pills-profile-tab1" data-bs-toggle="pill" style={{ fontWeight: '900!important', letterSpacing: '-0.02rem' }} data-bs-target="#pills-profile1" type="button" role="tab" aria-controls="pills-profile1" aria-selected="false">SUGGESTIONS</button>
-                                </li>
-                                <li className="nav-item px-1 " role="presentation">
-                                    <button className="bg-white fs-5 border-0 text-secondary opacity-50 fw-semibold fst-italic" id="pills-contact-tab1" data-bs-toggle="pill" style={{ fontWeight: '900!important', letterSpacing: '-0.02rem' }} data-bs-target="#pills-contact1" type="button" role="tab" aria-controls="pills-contact1" aria-selected="false">COLLECTIONS</button>
-                                </li>
                             </ul>
                         </div>
                         <div className="col-12">
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab1" tabIndex={0}>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-1.webp" alt="product" className="img-fluid" />
+   
+
+                                    {
+                                        record.map((val)=>{
+                                            
+                                         return(
+                                            <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
+                                            <div className="col-2">
+                                                <div className="imge">
+                                                    <img src={val.imageurl} alt="product" className="img-fluid" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">$45.00</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-2.webp" alt="product" className="img-fluid" />
+    
+                                            <div className="col-10 d-flex flex-column ms-3">
+                                                <p className="fs-8 text-dark fw-bold hovbor fit-width">{val.tittle}</p>
+                                                <p className="text-secondary fw-normal pt-2 fs-8 text-start">${val.saleprice}</p>
                                             </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">$45.00</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-4.webp" alt="product" className="img-fluid" />
                                             </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">$45.00</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-2.webp" alt="product" className="img-fluid" />
-                                            </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">$45.00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="tab-pane fade mb-2" id="pills-profile1" role="tabpanel" aria-labelledby="pills-profile-tab1" tabIndex={0}>
-                                    <ul>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                cat t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                dont take to strangers
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                vintage shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                cat t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                sonic the shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                cat t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                dont take to strangers
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                cat t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                shirt dont take to strangers
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                cat t shirt
-                                            </a>
-                                        </li>
-                                        <li className="py-2 px-2">
-                                            <a href="#" className="fs-6 fw-semibold" style={{ color: 'black!important' }}>
-                                                shirt
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact-tab1" tabIndex={0}>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-1.webp" alt="product" className="img-fluid" />
-                                            </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">123 products</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-2.webp" alt="product" className="img-fluid" />
-                                            </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">13 products</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-4.webp" alt="product" className="img-fluid" />
-                                            </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">123 products</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 d-flex align-items-center justify-content-center px-3 py-3">
-                                        <div className="col-2">
-                                            <div className="imge">
-                                                <img src="img/product-2.webp" alt="product" className="img-fluid" />
-                                            </div>
-                                        </div>
-                                        <div className="col-10 d-flex flex-column ms-3">
-                                            <p className="fs-8 text-dark fw-bold hovbor fit-width">These Pretzels Are Making Me Thirsty
-                                                T-Shirt</p>
-                                            <p className="text-secondary fw-normal pt-2 fs-8 text-start">12 products</p>
-                                        </div>
-                                    </div>
+                                         )
+                                        })
+                                    }
+
+
+                          
+
                                 </div>
                             </div>
                         </div>

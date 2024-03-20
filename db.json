@@ -55,21 +55,15 @@
       "name": "krish",
       "email": "krish@gmail.com",
       "password": "123123"
+    },
+    {
+      "id": "8161",
+      "name": "jk",
+      "email": "jk@gmail.com",
+      "password": "uiiu"
     }
   ],
   "products": [
-    {
-      "id": "u47dsae3",
-      "tittle": "Graphic Print Sleeveless Top",
-      "description": "A trendy sleeveless top featuring a bold graphic print, perfect for casual outings",
-      "category": "Sleeveless Top",
-      "Color": "Black/White",
-      "image": "",
-      "imageurl": "https://threadheads.com/cdn/shop/files/MILF-Frogs-Website.jpg?v=1706749759&width=600",
-      "Brands": "Zara",
-      "regularprice": "450",
-      "saleprice": "300"
-    },
     {
       "id": "w38rdsf5",
       "tittle": "Striped Button-Up Shirt",
@@ -309,6 +303,18 @@
       "Brands": "Free People",
       "regularprice": "480",
       "saleprice": "300"
+    },
+    {
+      "id": "08e3",
+      "tittle": "demo",
+      "description": "dmeo asasas",
+      "category": "mobile",
+      "Color": "red",
+      "image": "",
+      "imageurl": "asasasas",
+      "Brands": "oppo",
+      "regularprice": "100",
+      "saleprice": "90"
     }
   ]
 }
