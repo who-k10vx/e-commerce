@@ -1,0 +1,314 @@
+{
+  "users": [
+    {
+      "id": "bc4654c",
+      "name": "Harsh",
+      "email": "Harsh@gmail.com",
+      "password": "***********"
+    },
+    {
+      "id": "203321",
+      "name": "Jenish",
+      "email": "Jenish@gmail.com",
+      "password": "********"
+    },
+    {
+      "id": "13424324031",
+      "name": "Jatin",
+      "email": "Jatin@gmail.com",
+      "password": "**********"
+    },
+    {
+      "id": "b4324c4c",
+      "name": "Harsh",
+      "email": "Harsh@gmail.com",
+      "password": "***********"
+    },
+    {
+      "id": "2432031",
+      "name": "Jenish",
+      "email": "Jenish@gmail.com",
+      "password": "********"
+    },
+    {
+      "id": "10432331",
+      "name": "Jatin",
+      "email": "Jatin@gmail.com",
+      "password": "**********"
+    }
+  ],
+  "admin": [
+    {
+      "id": "9990",
+      "name": "krish",
+      "email": "krish@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "dbc4",
+      "name": "da",
+      "email": "fnsjkd@gmail.com",
+      "password": "43141"
+    },
+    {
+      "id": "d3c3",
+      "name": "krish",
+      "email": "krish@gmail.com",
+      "password": "123123"
+    }
+  ],
+  "products": [
+    {
+      "id": "u47dsae3",
+      "tittle": "Graphic Print Sleeveless Top",
+      "description": "A trendy sleeveless top featuring a bold graphic print, perfect for casual outings",
+      "category": "Sleeveless Top",
+      "Color": "Black/White",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/MILF-Frogs-Website.jpg?v=1706749759&width=600",
+      "Brands": "Zara",
+      "regularprice": "450",
+      "saleprice": "300"
+    },
+    {
+      "id": "w38rdsf5",
+      "tittle": "Striped Button-Up Shirt",
+      "description": "This is the best one",
+      "category": "Shirt",
+      "Color": "Blue/White",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/PICKLES-Website-1.jpg?v=1706750043&width=600",
+      "Brands": "H&M",
+      "regularprice": "550",
+      "saleprice": "400"
+    },
+    {
+      "id": "t84jxpw9",
+      "tittle": "Floral Maxi Dress",
+      "description": "A beautiful floral maxi dress, perfect for summer occasions",
+      "category": "Dress",
+      "Color": "Pink/White",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/White-Front_3363b8b2-c5f7-4cb4-a45f-bf3019883046.jpg?v=1698098425&width=600",
+      "Brands": "Urban Outfitters",
+      "regularprice": "700",
+      "saleprice": "400"
+    },
+    {
+      "id": "q62plkw9",
+      "tittle": "Denim Shorts",
+      "description": "Classic denim shorts with a comfortable fit, perfect for summer adventures",
+      "category": "Shorts",
+      "Color": "Blue",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeWhite-Front_4_da554de8-9c55-4bd9-bbdc-6d59b5aebe1c.jpg?v=1698289597&width=600",
+      "Brands": "Forever 21",
+      "regularprice": "250",
+      "saleprice": "150"
+    },
+    {
+      "id": "m84rksa7",
+      "tittle": "Printed Scarf",
+      "description": "A vibrant printed scarf to add a pop of color to any outfit",
+      "category": "Accessories",
+      "Color": "Multicolor",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/SLASHER-Website-1_22163099-9b7e-43c8-963a-05176dfbe4b8.jpg?v=1706750254&width=600",
+      "Brands": "Urban Outfitters",
+      "regularprice": "150",
+      "saleprice": "100"
+    },
+    {
+      "id": "x49pldw3",
+      "tittle": "Casual Joggers",
+      "description": "Comfortable joggers with a relaxed fit, ideal for lounging or running errands",
+      "category": "Pants",
+      "Color": "Gray",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeBlack-Front_2_6ddec1bf-e9f6-4126-8446-6cc7e1a1a621.jpg?v=1698289646&width=600",
+      "Brands": "Zara",
+      "regularprice": "400",
+      "saleprice": "250"
+    },
+    {
+      "id": "u39plsq2",
+      "tittle": "Classic Denim Jacket",
+      "description": "A timeless denim jacket with a slightly distressed finish, perfect for layering",
+      "category": "Jacket",
+      "Color": "Blue",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeBlack-Front_e1a5ade4-f32b-4a70-b198-7bd8decc8337.jpg?v=1705895272&width=600",
+      "Brands": "Levi's",
+      "regularprice": "600",
+      "saleprice": "350"
+    },
+    {
+      "id": "w48zqrf6",
+      "tittle": "Striped Polo Shirt",
+      "description": "A classic striped polo shirt, perfect for casual outings",
+      "category": "Polo Shirt",
+      "Color": "Blue/White",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeBlack-Front_8bc6ce13-b690-4084-a0f4-a9965c5cf19a.jpg?v=1699499052&width=600",
+      "Brands": "Tommy Hilfiger",
+      "regularprice": "450",
+      "saleprice": "300"
+    },
+    {
+      "id": "m37hrtv9",
+      "tittle": "Distressed Skinny Jeans",
+      "description": "Stylish distressed skinny jeans for a trendy look",
+      "category": "Jeans",
+      "Color": "Black",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeWhite-Front_708fd61d-953c-44d8-a79e-4499ca08230b.jpg?v=1699499564&width=600",
+      "Brands": "Topshop",
+      "regularprice": "550",
+      "saleprice": "250"
+    },
+    {
+      "id": "p29xwyt5",
+      "tittle": "Strappy Sandals",
+      "description": "Elegant strappy sandals for a chic summer look",
+      "category": "Sandals",
+      "Color": "Brown",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/White-Front_b1bd6854-183a-432d-9630-d39b6b106c7d.jpg?v=1698098319&width=600",
+      "Brands": "Steve Madden",
+      "regularprice": "400",
+      "saleprice": "200"
+    },
+    {
+      "id": "k64zqwk8",
+      "tittle": "Printed Skater Dress",
+      "description": "A playful printed skater dress for a fun day out",
+      "category": "Dress",
+      "Color": "Yellow/Blue",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/HOORAYFORBOOBIES-Website.png?v=1709880917&width=600",
+      "Brands": "ASOS",
+      "regularprice": "480",
+      "saleprice": "300"
+    },
+    {
+      "id": "q82nlsd3",
+      "tittle": "Graphic Print T-Shirt",
+      "description": "A trendy graphic print t-shirt for a casual streetwear look",
+      "category": "T-Shirt",
+      "Color": "Black",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeBlack-Front_6.jpg?v=1698272851&width=600",
+      "Brands": "Adidas",
+      "regularprice": "300",
+      "saleprice": "150"
+    },
+    {
+      "id": "l67zpxq9",
+      "tittle": "Striped Linen Shirt",
+      "description": "A lightweight striped linen shirt for a relaxed summer vibe",
+      "category": "Shirt",
+      "Color": "Blue/White",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeWhite-Front_4a53f601-b212-4350-affd-577f9bd567bb.jpg?v=1699500904&width=600",
+      "Brands": "Gap",
+      "regularprice": "280",
+      "saleprice": "200"
+    },
+    {
+      "id": "w49dfgh5",
+      "tittle": "Cropped Hoodie",
+      "description": "A cozy cropped hoodie for a casual and comfortable style",
+      "category": "Hoodie",
+      "Color": "Grey",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/Oversize_White-Front_99ec33c5-3557-415b-8658-96baeedd8c81.jpg?v=1709261260&width=600",
+      "Brands": "Nike",
+      "regularprice": "400",
+      "saleprice": "250"
+    },
+    {
+      "id": "p98klte3",
+      "tittle": "Ripped Denim Shorts",
+      "description": "Stylish ripped denim shorts for a trendy summer look",
+      "category": "Shorts",
+      "Color": "Blue",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeBlack-Front_a705952b-730a-42bd-becf-11a06d377933.jpg?v=1699500939&width=600",
+      "Brands": "American Eagle",
+      "regularprice": "250",
+      "saleprice": "150"
+    },
+    {
+      "id": "m37zxcv2",
+      "tittle": "Leather Crossbody Bag",
+      "description": "A stylish leather crossbody bag for carrying essentials on the go",
+      "category": "Bag",
+      "Color": "Brown",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/Oversize_Black-Front_35810a6a-6229-4166-aa7f-4eda3ee260dc.png?v=1704933392&width=600",
+      "Brands": "Michael Kors",
+      "regularprice": "600",
+      "saleprice": "400"
+    },
+    {
+      "id": "b75plmn4",
+      "tittle": "High-Waisted Skinny Jeans",
+      "description": "Classic high-waisted skinny jeans for a flattering fit",
+      "category": "Jeans",
+      "Color": "Black",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeBlack-Front_3f18afec-7ee3-477e-bb06-a1acd86a28b0.jpg?v=1700218834&width=600",
+      "Brands": "Forever 21",
+      "regularprice": "450",
+      "saleprice": "300"
+    },
+    {
+      "id": "k82qwop7",
+      "tittle": "Printed Floral Blouse",
+      "description": "A charming printed floral blouse for a feminine touch",
+      "category": "Blouse",
+      "Color": "Pink/Blue",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeBlack-Front_3f18afec-7ee3-477e-bb06-a1acd86a28b0.jpg?v=1700218834&width=600",
+      "Brands": "H&M",
+      "regularprice": "320",
+      "saleprice": "200"
+    },
+    {
+      "id": "q76oieq5",
+      "tittle": "Striped Linen Shorts",
+      "description": "Lightweight striped linen shorts for a breezy summer look",
+      "category": "Shorts",
+      "Color": "White/Blue",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeWhite-Front_fbce4415-d113-4d7b-9242-1c1f575159a8.jpg?v=1700201884&width=600",
+      "Brands": "Zara",
+      "regularprice": "280",
+      "saleprice": "180"
+    },
+    {
+      "id": "e92qwer8",
+      "tittle": "Striped Canvas Sneakers",
+      "description": "Comfortable striped canvas sneakers for everyday wear",
+      "category": "Shoes",
+      "Color": "Blue/White",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeWhite-Front_3.jpg?v=1698272844&width=600",
+      "Brands": "Converse",
+      "regularprice": "350",
+      "saleprice": "250"
+    },
+    {
+      "id": "w84plkl2",
+      "tittle": "Printed Maxi Skirt",
+      "description": "A flowy printed maxi skirt for a bohemian-inspired look",
+      "category": "Skirt",
+      "Color": "Multi-color",
+      "image": "",
+      "imageurl": "https://threadheads.com/cdn/shop/files/OversizeWhite-Front_4_da554de8-9c55-4bd9-bbdc-6d59b5aebe1c.jpg?v=1698289597&width=600",
+      "Brands": "Free People",
+      "regularprice": "480",
+      "saleprice": "300"
+    }
+  ]
+}
